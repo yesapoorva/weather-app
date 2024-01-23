@@ -23,3 +23,5 @@ POST create useers - https://apoorvasweatherapp.onrender.com/api/signup
 
 POST Login - https://apoorvasweatherapp.onrender.com/api/login
 
+GET integrate with frontend for dynamic search - https://apoorvasweatherapp.onrender.com/city-suggestions?q=hyd
+
