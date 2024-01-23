@@ -6,6 +6,9 @@ import userRoutes from './routes/userRoutes.js';
 import transactionHistoryRoutes from './routes/transactionHistoryRoutes.js'
 import requireSignin from './middleware/requireSignin.js';
 import TransactionHistory from './models/transactionHistoryModel.js';
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const cities = require('cities.json');
 dotenv.config();
 
 const app = express();
@@ -42,6 +45,14 @@ app.get('/weather/:location', requireSignin, async (req, res) => {
         res.status(500).json({ error: 'Internal Server Error' });
     }
 });
+
+//api or dynamic search operations 
+app.get('/city-suggestions', (req, res) => {
+    const query = req.query.q.toLowerCase();
+    const suggestions = cities.filter(city => city.name.toLowerCase().startsWith(query));
+    const suggestionNames = suggestions.map(city => city.name);
+    res.json({ suggestions: suggestionNames });
+  });
 
 app.listen(port, () => {
     console.log(`Server is running on ${port}`);
