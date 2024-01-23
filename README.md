@@ -8,6 +8,7 @@ This Weather App allows users to retrieve weather information for a specific cit
 
 - Get real-time weather information for a specific city or country.
 - View transaction history, including user details, queried city, and query time.
+- Dynamic search API which can further be integrated with frontend searchbar for auto suggestions 
 
 ### Running the App
 
