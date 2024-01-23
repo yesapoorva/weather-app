@@ -13,3 +13,10 @@ This Weather App allows users to retrieve weather information for a specific cit
 
 npm start
 
+### Deployed Links
+
+GET weather report for a city/country (Authorization token required)- https://apoorvasweatherapp.onrender.com/weather/hyderabad
+GET transaction histories - https://apoorvasweatherapp.onrender.com/api/transactionHistory
+POST create useers - https://apoorvasweatherapp.onrender.com/api/signup
+POST Login - https://apoorvasweatherapp.onrender.com/api/login
+
